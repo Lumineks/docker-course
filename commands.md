@@ -33,6 +33,8 @@ Creates and starts docker container from docker image
 Combination: `-it`
 To enter started container, should use both -i and -t flags -> this combination will not pause container but open it's CLI in current terminal
 ### Example: `docker run busybox -it`
+3) `-d`: detached
+With this flag container will be started in a background mode, without blocking active
 
 ### Example of official 'hello-world' image from docker hub
 
@@ -47,6 +49,15 @@ To generate this message, Docker took the following steps:
 4.  The Docker daemon streamed that output to the Docker client, which sent it to your terminal.
 ```
 
+## `docker exec <flags> <container_name | container_id> <process_name>`
+Executes proccess in active container
+
+## `docker stop <container_id | container_name>`
+Stops active container
+
+## `docker kill <container_id | container_name>`
+Kills active container proccess, should use if 'stop' command does not work
+
 ## `docker pull <image-name>`
 
 Downloads and saves image from docker hub
@@ -57,3 +68,11 @@ Removes existing started/stopped container by id/name
 
 ## `docker container prune`
 Removes all stopped containers
+
+## `docker inspect <container_id> or <container_name>`
+Shows details of a particular container
+
+Details filter: `| grep <property_name>`
+Example: `docker inspect <id> grep IPAddress` - will show only ip-address related info
+
+ 
