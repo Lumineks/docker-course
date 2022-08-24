@@ -35,6 +35,8 @@ To enter started container, should use both -i and -t flags -> this combination 
 ### Example: `docker run busybox -it`
 3) `-d`: detached
 With this flag container will be started in a background mode, without blocking active
+4) `-p <pc_port>:<container_port>`: port
+Example: docker run -p 8080:80 nginx - maps current pc '8080' port to cotainers '80' port
 
 ### Example of official 'hello-world' image from docker hub
 
