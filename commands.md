@@ -46,6 +46,9 @@ Creates and starts docker container from docker image
 
 ### Example: `docker run -v ${PWD}:/usr/share/nginx/html -p 8080:80 -d nginx`
 
+6) `--rm`: remove
+Removes container after stop
+
 ### Example of official 'hello-world' image from docker hub
 
 ```
