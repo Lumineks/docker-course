@@ -109,3 +109,9 @@ docker run \
 --rm \
 nginx
 ```
+
+## Image tags
+Image tag specifies image version.
+There are some predefined values like:
+1. `image_name:latest` - specifies the latest image version
+2. `image_name:alpine` - specifies the lowest image version
