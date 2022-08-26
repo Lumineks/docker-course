@@ -46,8 +46,8 @@ Creates and starts docker container from docker image
 
 ### Example: `docker run -v ${PWD}:/usr/share/nginx/html -p 8080:80 -d nginx`
 
-6) `--rm`: remove
-Removes container after stop
+6. `--rm`: remove
+   Removes container after stop
 
 ### Example of official 'hello-world' image from docker hub
 
@@ -93,3 +93,19 @@ Shows details of a particular container
 
 Details filter: `| grep <property_name>`
 Example: `docker inspect <id> grep IPAddress` - will show only ip-address related info
+
+## Command break-lines
+
+Use `\` to break line in a docker command
+
+### Example:
+
+```
+docker run \
+--name my-nginx-container \
+-v ${PWD}:/usr/share/nginx/html \
+-p 8088:80 \
+-d \
+--rm \
+nginx
+```
