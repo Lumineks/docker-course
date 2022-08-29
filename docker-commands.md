@@ -94,6 +94,10 @@ Shows details of a particular container
 Details filter: `| grep <property_name>`
 Example: `docker inspect <id> grep IPAddress` - will show only ip-address related info
 
+## `docker logs <container_id | <container_name>`
+
+Shows all container-specific logs
+
 ## Command break-lines
 
 Use `\` to break line in a docker command
