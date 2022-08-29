@@ -14,6 +14,8 @@
    Copies local file in the specified image directory. Usually this is a working image directory that was created in the previous step
 5. `CMD`
    Executes command after images was created. The process for docker container.
+6. `EXPOSE`
+   Opens cpecified port in the container
 
 **To build docker image from Dockerfile run `docker build <path_to_Dockerfile>`**
 Example if in the folder with Dockerfile - `docker build .`
@@ -32,9 +34,15 @@ If in the project dir Dockerfile has another name, e.x. Dockerfile-dev. Use '-f'
 ```
 FROM node:alpine
 
-WORKDIR: /app
+WORKDIR /app
 
-COPY . .
+EXPOSE 3000
 
-CMD ["node", "index.js"]
+COPY package*.json ./
+
+RUN npm install
+
+COPY . ./
+
+CMD ["npm ", "run", "dev"]
 ```
