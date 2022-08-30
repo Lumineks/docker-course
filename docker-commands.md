@@ -98,6 +98,10 @@ Example: `docker inspect <id> grep IPAddress` - will show only ip-address relate
 
 Shows all container-specific logs
 
+## `docker volume ls`
+
+Shows all docker-host volumes
+
 ## Command break-lines
 
 Use `\` to break line in a docker command
@@ -115,7 +119,9 @@ nginx
 ```
 
 ## Image tags
+
 Image tag specifies image version.
 There are some predefined values like:
+
 1. `image_name:latest` - specifies the latest image version
 2. `image_name:alpine` - specifies the lowest image version
