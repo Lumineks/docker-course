@@ -49,6 +49,9 @@ Creates and starts docker container from docker image
 6. `--rm`: remove
    Removes container after stop
 
+7. `--network=<network_name>`
+   Attaches container to network
+
 ### Example of official 'hello-world' image from docker hub
 
 ```
@@ -101,6 +104,14 @@ Shows all container-specific logs
 ## `docker volume ls`
 
 Shows all docker-host volumes
+
+## `docker network create <network_name>`
+
+Creates new docker network
+
+## `docker network connect <network_name> <container_network>`
+
+Attackes existing container to existing network
 
 ## Command break-lines
 
