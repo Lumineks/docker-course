@@ -30,7 +30,7 @@ Creates and starts docker container from docker image
 ### Flags
 
 1. `-i`: interactive mode
-2. `-t`: terminal
+2. `-t`: virtual docker terminal
    Combination: `-it`
    To enter started container, should use both -i and -t flags -> this combination will not pause container but open it's CLI in current terminal
 
